@@ -2,9 +2,29 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.3.
 
+## Installation
+
+To install Angular v19, run:
+
+```bash
+npm install -g @angular/cli@19
+```
+
+Make sure Angular is installed properly, run:
+
+```bash
+ng --version
+```
+
+It should reply something like:
+
+```bash
+19.x.x
+```
+
 ## Development server
 
-To start a local development server, run:
+To start a local development server, in the root directory, run :
 
 ```bash
 ng serve
@@ -12,48 +32,91 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+## Generate a component
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Angular CLI includes generating new components, run:
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+or the condensed version:
+
+```bash
+ng g c component-name
+```
+
+You can also generate other Angular elements this way, such as `services`, `directives`, `pipes` etc...
+
+```bash
+ng g s service-name
+ng g d directive-name
+ng g p pipe-name
+...
+```
+
+If you're not sure what this commands will do exactly, you can use `-d` to do a dry run, meaning that no changes will be made:
+
+```bash
+ng g c -d component-name
+```
+
+For a complete list, run:
 
 ```bash
 ng generate --help
 ```
 
-## Building
+## Project structure
 
-To build the project run:
+This Angular project folder structure should look more or less like this:
 
-```bash
-ng build
+```
+src
+└── app
+    ├── core
+        ├── auth
+            ├── components
+            ├── models
+            ├── services
+            ├── auth.routes.ts
+            └── pages
+                └── login
+        └── services
+    ├── features
+        ├── product
+        ├── cart
+        └── checkout
+            ├── components
+            ├── models
+            ├── services
+            ├── checkout.routes.ts
+            └── pages
+                ├── address
+                └── payment
+    ├── shared
+        ├── components
+            ├── notification.component.ts
+            ├── notification.component.html
+            └── notification.component.css
+        ├── pipes
+            └── date.pipe.ts
+        └── utils
+            └── array.utils.ts
+    |
+    |
+    ├── app.component.html
+    ├── app.component.scss
+    ├── app.component.ts
+    ├── app.config.ts
+    └── app.routes.ts
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+`core` is for non business features. A non business feature is a feature that is not specific to the business domain of the app such as authentication, which has nothing to do with what this app is made for.
 
-## Running unit tests
+`features` is for business features. A business feature is a feature that is specific to the business domain of the app such as products for an e-commerce website. It's directly connected to the purpose this app was designed for.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+`shared` is for code shared between the different features of the app. Note that some code may be shared AND have some business logic. This code should be put in the features folder.
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Also, what's the difference between pages and components ?
+If there is a route that leads to it, it's a page, if not, it's a component.
