@@ -120,3 +120,37 @@ src
 
 Also, what's the difference between pages and components ?
 If there is a route that leads to it, it's a page, if not, it's a component.
+
+## Branch naming
+
+A branch should be named like this:
+
+```
+issueNumber-quickDescription
+```
+
+For instance, if the issue is `Add search on articles #12`, the branch should be named:
+
+```
+12-add-article-search
+```
+
+You can also open your issue and click on `Create a branch` on the right side of the panel.
+
+## Commit convention
+
+Commits should look like this:
+
+```
+<type>: <description>
+```
+
+For instance, if you added a search input in the html for the issue `Add search on articles #12`, your commit should be:
+
+```
+feat: add search input
+```
+
+Some common types are `feat`, `fix`, `docs` etc...
+
+Less common ones are `chore`, `style`, `refactor`, `test` etc..
