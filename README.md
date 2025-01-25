@@ -75,36 +75,18 @@ This Angular project folder structure should look more or less like this:
 src
 └── app
     ├── core
-        ├── auth
-            ├── components
-            ├── models
-            ├── services
-            ├── auth.routes.ts
-            └── pages
-                └── login
+        ├── pages
+            └── home
+        ├── components
+        ├── models
         └── services
     ├── features
-        ├── product
-        ├── cart
-        └── checkout
-            ├── components
-            ├── models
-            ├── services
-            ├── checkout.routes.ts
-            └── pages
-                ├── address
-                └── payment
-    ├── shared
+        ├── pages
+            └── article-details
         ├── components
-            ├── notification.component.ts
-            ├── notification.component.html
-            └── notification.component.css
-        ├── pipes
-            └── date.pipe.ts
-        └── utils
-            └── array.utils.ts
-    |
-    |
+            └── article-card
+        ├── models
+        └── services
     ├── app.component.html
     ├── app.component.scss
     ├── app.component.ts
