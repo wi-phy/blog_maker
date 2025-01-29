@@ -1,0 +1,41 @@
+<div
+  class="text-white max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-700 p-4 space-y-4"
+>
+  <h4 class="text-lg font-semibold text-gray-900 dark:text-white">
+    {{ card.title }}
+  </h4>
+
+  <div class="flex justify-center">
+    @if (card.image) {
+    <img
+      class="w-40 h-auto object-cover mx-auto rounded-lg"
+      src="https://static.cotemaison.fr/medias_11941/w_600,h_600,c_fill,g_north/v1580205097/du-blanc-et-des-couleurs-claires-pour-un-interieur-cosy_6113830.jpg"
+      alt=""
+    />
+    }
+  </div>
+
+  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+    {{ card.description }}
+  </p>
+
+  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+    {{ card.deuxieme_description }}
+  </p>
+
+  <a
+    href="#"
+    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+  >
+    Read more
+  </a>
+</div>
+
+<!-- <button
+  (click)="myFunction($event)"
+  class="mt-4 bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-800"
+>
+  Tu veux quoi?
+</button>
+
+{{ test }} -->
