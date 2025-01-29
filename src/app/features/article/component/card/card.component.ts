@@ -14,4 +14,10 @@ export class CardComponent {
     description: 'Une description',
     deuxieme_description: 'Une autre description',
   };
+  test = 'ma bite';
+
+  myFunction(e: Event) {
+    this.test = 'mon chibre';
+    console.log(e);
+  }
 }
