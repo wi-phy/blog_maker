@@ -1,22 +1,13 @@
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
-
 import { CardComponent } from '../../../features/article/component/card/card.component';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
-  imports: [CardComponent],
-
+  selector: 'app-home',
+  imports: [CardComponent, RouterLink],
   templateUrl: './home.page.html',
   styleUrl: './home.page.scss',
 })
-export class HomePageComponent {
-  router = inject(Router);
-
-  goToLogin() {
-    this.router.navigate(['/login']);
-  }
-
-  goToSignUp() {
-    this.router.navigate(['/signup']);
-  }
+export class HomePage {
+  private readonly router = inject(Router);
 }
