@@ -19,11 +19,7 @@ export class LoginPage {
     this.router.navigate(['/home']);
   }
 
-  hidePassword() {
-    this.isPasswordShown.set(false);
-  }
-
-  showPassword() {
-    this.isPasswordShown.set(true);
+  togglePassword() {
+    this.isPasswordShown.update((hide) => !hide);
   }
 }

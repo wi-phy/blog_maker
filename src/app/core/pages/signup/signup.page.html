@@ -46,7 +46,7 @@
           name="lucideEye"
           class="absolute right-3 cursor-pointer"
           [class]="isPasswordShown() ? 'show' : 'hide'"
-          (click)="hidePassword()"
+          (click)="togglePassword()"
         ></ng-icon>
         <ng-icon
           hlm
@@ -54,7 +54,7 @@
           name="lucideEyeOff"
           class="absolute right-3 cursor-pointer"
           [class]="isPasswordShown() ? 'hide' : 'show'"
-          (click)="showPassword()"
+          (click)="togglePassword()"
         ></ng-icon>
       </div>
     </div>
@@ -79,7 +79,7 @@
           name="lucideEye"
           class="absolute right-3 cursor-pointer"
           [class]="isConfirmPasswordShown() ? 'show' : 'hide'"
-          (click)="hideConfirmPassword()"
+          (click)="toggleConfirmPassword()"
         ></ng-icon>
         <ng-icon
           hlm
@@ -87,7 +87,7 @@
           name="lucideEyeOff"
           class="absolute right-3 cursor-pointer"
           [class]="isConfirmPasswordShown() ? 'hide' : 'show'"
-          (click)="showConfirmPassword()"
+          (click)="toggleConfirmPassword()"
         ></ng-icon>
       </div>
     </div>

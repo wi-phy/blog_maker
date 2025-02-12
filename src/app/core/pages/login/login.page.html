@@ -50,7 +50,7 @@
           name="lucideEye"
           class="absolute right-3 cursor-pointer"
           [class]="isPasswordShown() ? 'show' : 'hide'"
-          (click)="hidePassword()"
+          (click)="togglePassword()"
         ></ng-icon>
         <ng-icon
           hlm
@@ -58,7 +58,7 @@
           name="lucideEyeOff"
           class="absolute right-3 cursor-pointer"
           [class]="isPasswordShown() ? 'hide' : 'show'"
-          (click)="showPassword()"
+          (click)="togglePassword()"
         ></ng-icon>
       </div>
     </div>

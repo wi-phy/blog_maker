@@ -19,19 +19,12 @@ export class SignupPage {
   goToHome() {
     this.router.navigate(['/home']);
   }
-  showPassword() {
-    this.isPasswordShown.set(true);
+
+  togglePassword() {
+    this.isPasswordShown.update((hide) => !hide);
   }
 
-  hidePassword() {
-    this.isPasswordShown.set(false);
-  }
-
-  showConfirmPassword() {
-    this.isConfirmPasswordShown.set(true);
-  }
-
-  hideConfirmPassword() {
-    this.isConfirmPasswordShown.set(false);
+  toggleConfirmPassword() {
+    this.isConfirmPasswordShown.update((hide) => !hide);
   }
 }
