@@ -19,7 +19,7 @@
           id="text"
           autocomplete="username"
           required
-          class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+          class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 border-2 border-gray-300 placeholder:text-gray-400 focus:border-2 focus:border-offset-2 focus:border-blue-600 sm:text-sm/6"
         />
       </div>
     </div>
@@ -30,17 +30,32 @@
           >Password</label
         >
       </div>
-      <div class="mt-2">
-        <div>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            autocomplete="current-password"
-            required
-            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
-          />
-        </div>
+      <div class="relative mt-2 flex items-center">
+        <input
+          [type]="isPasswordShown() ? 'text' : 'password'"
+          name="password"
+          id="password"
+          autocomplete="current-password"
+          required
+          class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 border-2 border-gray-300 placeholder:text-gray-400 focus:border-2 focus:border-offset-2 focus:border-blue-600 sm:text-sm/6"
+        />
+
+        <ng-icon
+          hlm
+          size="sm"
+          name="lucideEye"
+          class="absolute right-3 cursor-pointer"
+          [class]="isPasswordShown() ? 'show' : 'hide'"
+          (click)="togglePassword()"
+        ></ng-icon>
+        <ng-icon
+          hlm
+          size="sm"
+          name="lucideEyeOff"
+          class="absolute right-3 cursor-pointer"
+          [class]="isPasswordShown() ? 'hide' : 'show'"
+          (click)="togglePassword()"
+        ></ng-icon>
       </div>
     </div>
     <div>
@@ -49,15 +64,31 @@
         class="block text-sm/6 font-medium text-gray-900"
         >Confirm Password</label
       >
-      <div class="mt-2">
+      <div class="relative mt-2 flex items-center">
         <input
-          type="password"
+          [type]="isConfirmPasswordShown() ? 'text': 'password'"
           name="confirm-password"
           id="confirm-password"
           autocomplete="new-password"
           required
-          class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm/6"
+          class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 border-2 border-gray-300 placeholder:text-gray-400 focus:border-2 focus:border-offset-2 focus:border-blue-600 sm:text-sm/6"
         />
+        <ng-icon
+          hlm
+          size="sm"
+          name="lucideEye"
+          class="absolute right-3 cursor-pointer"
+          [class]="isConfirmPasswordShown() ? 'show' : 'hide'"
+          (click)="toggleConfirmPassword()"
+        ></ng-icon>
+        <ng-icon
+          hlm
+          size="sm"
+          name="lucideEyeOff"
+          class="absolute right-3 cursor-pointer"
+          [class]="isConfirmPasswordShown() ? 'hide' : 'show'"
+          (click)="toggleConfirmPassword()"
+        ></ng-icon>
       </div>
     </div>
 
