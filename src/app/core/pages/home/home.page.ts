@@ -8,6 +8,6 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './home.page.html',
   styleUrl: './home.page.scss',
 })
-export class HomePage {
+export class HomePageComponent {
   private readonly router = inject(Router);
 }

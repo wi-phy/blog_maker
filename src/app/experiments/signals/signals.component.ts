@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-signals',
   imports: [],
   templateUrl: './signals.component.html',
-  styleUrl: './signals.component.scss'
+  styleUrl: './signals.component.scss',
 })
-export class SignalsComponent {
-
-}
+export class SignalsComponent {}
