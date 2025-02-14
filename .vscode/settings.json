@@ -1,0 +1,21 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true // Exécute ESLint après Prettier
+  },
+  // Assurez-vous que Prettier est bien configuré pour les langages que vous utilisez:
+  "prettier.documentSelectors": [
+    "**/*.html",
+    "**/*.ts",
+    "**/*.js",
+    "**/*.css",
+    "**/*.json"
+  ]
+}

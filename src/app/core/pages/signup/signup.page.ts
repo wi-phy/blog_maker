@@ -10,7 +10,7 @@ import { HlmIconDirective } from '@spartan-ng/ui-icon-helm';
   templateUrl: './signup.page.html',
   styleUrl: './signup.page.scss',
 })
-export class SignupPage {
+export class SignupPageComponent {
   router = inject(Router);
 
   isPasswordShown = signal(false);

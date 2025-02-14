@@ -9,7 +9,7 @@ import { CardComponent } from '../../../features/article/component/card/card.com
   templateUrl: './home.page.html',
   styleUrl: './home.page.scss',
 })
-export class HomePage {
+export class HomePageComponent {
   router = inject(Router);
 
   goToLogin() {
