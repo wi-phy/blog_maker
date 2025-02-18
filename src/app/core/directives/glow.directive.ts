@@ -10,7 +10,7 @@ import {
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 import { GlowService } from '../services/glow.service';
-// import { ColorConverterService } from '../services/color-converter.service';
+import { ColorConverterService } from '../services/color-converter.service';
 
 interface Coords {
   x: number;
@@ -31,14 +31,14 @@ export class GlowDirective implements OnInit {
   private readonly renderer = inject(Renderer2);
   private readonly destroyRef = inject(DestroyRef);
   private readonly glowService = inject(GlowService);
-  // private readonly colorConverterService = inject(ColorConverterService);
+  private readonly colorConverterService = inject(ColorConverterService);
 
   @Input() config: Config = { color: 'red', size: '200' };
 
   private needUpdate = true;
 
   ngOnInit(): void {
-    // console.log(this.colorConverterService.rgbToHsl('rgb(123, 45, 67)'));
+    console.log(this.colorConverterService.rgbToHsl('rgb(123, 45, 67)'));
     this.glowService.mouseMove$
       .pipe(
         takeUntilDestroyed(this.destroyRef),
