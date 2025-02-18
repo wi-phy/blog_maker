@@ -36,9 +36,12 @@ export class GlowDirective implements OnInit {
   @Input() config: Config = { color: 'red', size: '200' };
 
   private needUpdate = true;
+  private color = this.colorConverterService.rgbToHsl(
+    'rgb(155, 30, 155)',
+    '0.15'
+  );
 
   ngOnInit(): void {
-    console.log(this.colorConverterService.rgbToHsl('rgb(123, 45, 67)'));
     this.glowService.mouseMove$
       .pipe(
         takeUntilDestroyed(this.destroyRef),
@@ -64,7 +67,7 @@ export class GlowDirective implements OnInit {
     const x = coords.x - this.el.nativeElement.offsetLeft;
     const y = coords.y - this.el.nativeElement.offsetTop;
 
-    const gradient = `radial-gradient(circle at ${x}px ${y}px, rgba(230,0,0,0.5) 0px, rgba(0,0,0,0) ${this.config.size}px)`;
+    const gradient = `radial-gradient(circle at ${x}px ${y}px, ${this.color} 0px, rgba(0,0,0,0) ${this.config.size}px)`;
 
     this.renderer.setStyle(this.el.nativeElement, 'backgroundImage', gradient);
     this.needUpdate = true;

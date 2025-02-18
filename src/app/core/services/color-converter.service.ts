@@ -46,7 +46,7 @@ export class ColorConverterService {
     s = +(s * 100).toFixed(2);
     l = +(l * 100).toFixed(2);
 
-    return `hsl(${h}, ${s}, ${l}, ${opacity})`;
+    return `hsl(${h}, ${s}%, ${l}%, ${opacity})`;
   }
 
   private extractRgb(rgbColor: string): IRgb | null {
