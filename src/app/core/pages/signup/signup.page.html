@@ -16,6 +16,7 @@
         <input
           type="text"
           name="text"
+          [(ngModel)]="mail"
           id="text"
           autocomplete="username"
           required
@@ -33,6 +34,7 @@
         <input
           [type]="isPasswordShown() ? 'text' : 'password'"
           name="password"
+          [(ngModel)]="password"
           id="password"
           autocomplete="current-password"
           required
@@ -64,6 +66,7 @@
         <input
           [type]="isConfirmPasswordShown() ? 'text': 'password'"
           name="confirm-password"
+          [(ngModel)]="password"
           id="confirm-password"
           autocomplete="new-password"
           required
