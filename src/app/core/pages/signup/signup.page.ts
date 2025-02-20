@@ -12,8 +12,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './signup.page.scss',
 })
 export class SignupPageComponent {
-  password = '';
   mail = '';
+  password = '';
+  confirmPassword = '';
 
   router = inject(Router);
 

@@ -15,9 +15,9 @@
       <div class="mt-2">
         <input
           type="text"
-          name="text"
+          name="mail"
           [(ngModel)]="mail"
-          id="text"
+          id="mail"
           autocomplete="username"
           required
           class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 border-2 border-gray-300 placeholder:text-gray-400 focus:border-2 focus:border-offset-2 focus:border-blue-600 sm:text-sm/6" />
@@ -36,7 +36,6 @@
           name="password"
           [(ngModel)]="password"
           id="password"
-          autocomplete="current-password"
           required
           class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 border-2 border-gray-300 placeholder:text-gray-400 focus:border-2 focus:border-offset-2 focus:border-blue-600 sm:text-sm/6" />
 
@@ -65,10 +64,9 @@
       <div class="relative mt-2 flex items-center">
         <input
           [type]="isConfirmPasswordShown() ? 'text': 'password'"
-          name="confirm-password"
-          [(ngModel)]="password"
-          id="confirm-password"
-          autocomplete="new-password"
+          name="confirmPassword"
+          [(ngModel)]="confirmPassword"
+          id="confirmPassword"
           required
           class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 border-2 border-gray-300 placeholder:text-gray-400 focus:border-2 focus:border-offset-2 focus:border-blue-600 sm:text-sm/6" />
         <ng-icon
