@@ -14,10 +14,10 @@
       </label>
       <div class="mt-2">
         <input
-          type="text"
-          name="text"
-          id="text"
-          autocomplete="username"
+          type="username"
+          name="username"
+          [(ngModel)]="username"
+          id="username"
           required
           class="block w-full rounded-md bg-white px-3 py-1.5 text-base border-2 border-gray-300 placeholder:text-gray-400 focus:border-2 focus:-border-offset-2 focus:border-blue-600 sm:text-sm/6" />
       </div>
@@ -38,8 +38,8 @@
         <input
           [type]="isPasswordShown() ? 'text' : 'password'"
           name="password"
+          [(ngModel)]="password"
           id="password"
-          autocomplete="current-password"
           required
           class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 border-2 border-gray-300 placeholder:text-gray-400 focus:border-2 focus:border-offset-2 focus:border-blue-600 sm:text-sm/6 pr-10" />
         <ng-icon
